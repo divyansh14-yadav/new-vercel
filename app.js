@@ -24,10 +24,6 @@ app.use("/",authrouter)
 app.use("/",adminrouter)
 
 
-app.get("/",(req,res)=>{
-    res.send("hello")
-})
-
 const PORT=process.env.PORT||3000
 // connect mongo db atlas
 mongoose.connect(process.env.MONGO_URL,{usenewurlparser:true,}).then(()=>{
